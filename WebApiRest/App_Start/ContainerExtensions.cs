@@ -6,7 +6,7 @@ using BD;
 using Microsoft.Extensions.DependencyInjection;
 using WBL;
 
-namespace WebApi
+namespace WebApiRest
 {
     public static class ContainerExtension
     {

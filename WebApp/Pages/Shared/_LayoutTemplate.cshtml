@@ -1,9 +1,9 @@
-﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor Context;
+﻿@*@inject Microsoft.AspNetCore.Http.IHttpContextAccessor Context;
 @{ 
 
     var UsuarioSession = Context.HttpContext.Session.Get<Entity.UsuariosEntity>(IApp.UsuarioSession);
 
-}
+}*@
 
 <!DOCTYPE html>
 <html lang="en">
