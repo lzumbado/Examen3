@@ -71,7 +71,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryFirstAsync<ClientesEntity>("ProductoObtener", new
+                var result = sql.QueryFirstAsync<ProductoEntity>("ProductoObtener", new
                 { entity.ProductoId });
 
                 return await result;
