@@ -2,3 +2,58 @@
 @model WebApp.Pages.Clientes.EditModel
 @{
 }
+
+
+<div id="AppEdit" class="container" data-entity="@JsonSerializer.Serialize(Model.Entity)" v-cloak>
+    <div class="card">
+        <div class="card-header">
+            @(Model.id.HasValue? "Actualizar": "Nuevo Cliente")
+        </div>
+        <div class="card-body">
+            <form id="FormEdit">
+                <input type="hidden" asp-for="Entity.ClientesId" v-model="Entity.ClientesId" />
+                                             
+
+                <div class="form-group mb-3">
+                    <label for="Entity.NombreCompleto" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" asp-for="Entity.NombreCompleto" v-model="Entity.Nombre" maxlength="250" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Direccion" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" asp-for="Entity.Direccion" v-model="Entity.Direccion" maxlength="250" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Telefono" class="form-label">Telefono</label>
+                    <input type="text" class="form-control" asp-for="Entity.Telefono" v-model="Entity.Telefono" maxlength="250" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Entity.Estado" class="form-label">Estado</label>
+                    <input type="checkbox" class="form-check-input" asp-for="Entity.Estado" v-model="Entity.Estado">
+                </div>               
+
+                <div class="row">
+                    <div class="col-4">
+                        <button type="button" @@click="Save" class="btn btn-primary">
+                            @(Model.id.HasValue? "Actualizar": "Agregar")
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts
+{
+
+    <script defer src="~/App/Clientes/Edit.js"></script>
+
+
+}
