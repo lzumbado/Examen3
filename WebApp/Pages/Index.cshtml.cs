@@ -13,7 +13,7 @@ namespace WebApp.Pages
 
         public IActionResult OnGet()
         {
-            if (!this.SessionOnline()) return RedirectToPage("Login");
+            //if (!this.SessionOnline()) return RedirectToPage("Login");
 
             return Page();
         }
