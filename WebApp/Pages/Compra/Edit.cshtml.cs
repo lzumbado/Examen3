@@ -37,14 +37,12 @@ namespace WebApp.Pages.Compra
                 }
 
                 ClientesLista = await service.ClientesGetLista();
-
                 ProductoLista = await service.ProductoGetLista();
 
                 return Page();
             }
             catch (Exception ex)
             {
-
                 return Content(ex.Message);
             }
 

@@ -21,8 +21,8 @@ SET NOCOUNT ON
 	 ProductoId=@ProductoId,
 	 FechaCompra=@FechaCompra,
 	 Monto=@Monto,
-	 Impuesto=@Impuesto,
-	 Total=@Total,
+	 Impuesto=@Monto * 0.13,
+	 Total=@Monto * 1.13,
 	 Observaciones=@Observaciones,
      Estado=@Estado
 

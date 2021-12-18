@@ -33,8 +33,8 @@ SET NOCOUNT ON
 	    ,  @ProductoId
 	    ,  @FechaCompra
 	    ,  @Monto
-		,  @Impuesto
-		,  @Total
+		,  @Monto * 0.13
+		,  @Monto * 1.13
 		,  @Observaciones
 		,  @Estado
 		)
