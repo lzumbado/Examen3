@@ -28,7 +28,6 @@ namespace WebApi.Controllers
             }
             catch (Exception ex)
             {
-
                 return new List<ClientesEntity>();
             }
 
