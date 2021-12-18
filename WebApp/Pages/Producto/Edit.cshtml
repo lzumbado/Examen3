@@ -7,7 +7,7 @@
 <div id="AppEdit" class="container" data-entity="@JsonSerializer.Serialize(Model.Entity)" v-cloak>
     <div class="card">
         <div class="card-header">
-            @(Model.id.HasValue? "Actualizar": "Nuevo Cliente")
+            @(Model.id.HasValue? "Actualizar": "Nuevo Producto")
         </div>
         <div class="card-body">
             <form id="FormEdit">
@@ -16,7 +16,7 @@
 
                 <div class="form-group mb-3">
                     <label for="Entity.Descripcion" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" asp-for="Entity.Descripcion" v-model="Entity.DEscripcion" maxlength="250" required>
+                    <input type="text" class="form-control" asp-for="Entity.Descripcion" v-model="Entity.Descripcion" maxlength="250" required>
                 </div>
                                 
                 <div class="row">

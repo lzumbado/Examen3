@@ -77,7 +77,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("CompraInsertar", new
                 {
-                    entity.IdCompra,
+                    //entity.IdCompra,
                     entity.FechaCompra,
                     entity.Monto,
                     entity.Impuesto,
