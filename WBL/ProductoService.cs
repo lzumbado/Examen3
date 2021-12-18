@@ -92,7 +92,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("ProductoInsertar", new
                 {
-                    entity.ProductoId,
+                    //entity.ProductoId,
                     entity.Descripcion,
                     entity.Estado
 
