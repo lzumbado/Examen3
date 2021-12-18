@@ -6,7 +6,7 @@
 <div id="AppEdit" class="container" data-entity="@JsonSerializer.Serialize(Model.Entity)" v-cloak>
     <div class="card">
         <div class="card-header">
-            @(Model.id.HasValue? "Actualizar": "Nuevo Cliente")
+            @(Model.id.HasValue ? "Actualizar" : "Nuevo Cliente")
         </div>
         <div class="card-body">
             <form id="FormEdit">
@@ -16,7 +16,7 @@
                     <label for="Entity.ClientesId" class="form-label">Cliente</label>
 
                     <select asp-for="Entity.ClientesId" class="form-select"
-                            v-model="Entity.ClientesId" asp-items="@(new SelectList(Model.ClientesLista,"ClientesId","NombreCompleto"))" required>
+                            v-model="Entity.ClientesId" asp-items="@(new SelectList(Model.ClientesLista, "ClientesId", "NombreCompleto"))" required>
                     </select>
                 </div>
 
@@ -24,7 +24,7 @@
                     <label for="Entity.ProductoId" class="form-label">Producto</label>
 
                     <select asp-for="Entity.ProductoId" class="form-select"
-                            v-model="Entity.ProductoId" asp-items="@(new SelectList(Model.ProductoLista,"ProductoId","Descripcion"))" required>
+                            v-model="Entity.ProductoId" asp-items="@(new SelectList(Model.ProductoLista, "ProductoId", "Descripcion"))" required>
                     </select>
                 </div>
 
@@ -35,17 +35,7 @@
 
                 <div class="form-group mb-3">
                     <label for="Entity.Monto" class="form-label">Monto</label>
-                    <input type="number" class="form-control" asp-for="Entity.Monto" v-model="Entity.NombreMonto" required>
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="Entity.Impuesto" class="form-label">Impuesto</label>
-                    <input type="number" class="form-control" asp-for="Entity.Impuesto" v-model="Entity.NombreImpuesto" required>
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="Entity.Total" class="form-label">Total</label>
-                    <input type="number" class="form-control" asp-for="Entity.Total" v-model="Entity.Total" required>
+                    <input type="number" class="form-control" asp-for="Entity.Monto" v-model="Entity.Monto" required>
                 </div>
 
                 <div class="form-group mb-3">

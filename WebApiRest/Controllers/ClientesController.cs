@@ -101,7 +101,18 @@ namespace WebApi.Controllers
         }
 
 
-
+        [HttpGet("Lista")]
+        public async Task<IEnumerable<ClientesEntity>> GetLista()
+        {
+            try
+            {
+                return await clientesService.GetLista();
+            }
+            catch (Exception ex)
+            {
+                return new List<ClientesEntity>();
+            }
+        }
 
 
     }
