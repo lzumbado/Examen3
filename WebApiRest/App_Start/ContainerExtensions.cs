@@ -16,8 +16,8 @@ namespace WebApiRest
 
             services.AddSingleton<IDataAccess, DataAccess>();
             services.AddTransient<IClientesService, ClientesService>();
-            services.AddTransient<ProductoService, ProductoService>();
-            services.AddTransient<CompraService, CompraService>();
+            services.AddTransient<IProductoService, ProductoService>();
+            services.AddTransient<ICompraService, CompraService>();
 
             return services;
         }
